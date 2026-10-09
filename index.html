@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRURU MUSEUM — พิพิธภัณฑ์ความรู้ดิจิทัลแห่งชาติ</title>
+  
+  <!-- Fonts as specified in Project Brief -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Subtle Specimen Grid Background -->
+  <div class="specimen-grid"></div>
+
+  <!-- Header & Navigation -->
+  <header class="header-nav">
+    <div class="brand-logo-area">
+      <img src="assets/gruru_logo_thai_1791530183017.jpg" alt="GRURU Logo">
+      <div>
+        <div class="brand-text-title">GRURU MUSEUM</div>
+        <div class="brand-text-sub">FUTURE ARCHAEOLOGY // THAILAND</div>
+      </div>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#hero" class="nav-link active">HALL 01 Overview</a>
+      <a href="#data-booming" class="nav-link">HALL 02 Data Booming</a>
+      <a href="#knowledge-graph" class="nav-link">HALL 03 Knowledge Graph</a>
+      <a href="#methodology" class="nav-link">HALL 04 Pipeline</a>
+      <a href="presentation.html" class="btn-primary" target="_blank">เปิดโหมดนำเสนอ (Deck) ⛶</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-wrapper">
+
+    <!-- HERO SECTION -->
+    <section class="section-container" id="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="specimen-pill">
+            <span class="dot"></span>
+            NATIONAL DIGITAL INITIATIVE // GRM-2026-HQ
+          </div>
+          <h1 class="hero-main-title">
+            ความรู้ที่ซ่อนอยู่ในอดีต<br>
+            <span style="color: var(--gr-violet);">ปลุกสู่เรื่องเล่าใหม่</span>
+          </h1>
+          
+          <div class="hero-tagline-quote">
+            <strong style="color: var(--gr-void); font-size: 1.15rem;">“New Knowledge. New Storytelling. Built for Everyday Living.”</strong>
+            ห้องแล็บของนักโบราณคดีจากอนาคต (Future Archaeology) พลิก 'อดีตคือข้อมูล อนาคตคือเรื่องเล่า' เชื่อมโยงภูมิปัญญาไทยด้วยกราฟปัญญาประดิษฐ์
+          </div>
+
+          <div class="hero-actions">
+            <a href="#data-booming" class="btn-primary">⚡ เริ่มขุดค้นความรู้ (Explore)</a>
+            <a href="presentation.html" class="btn-secondary">📊 ดูสไลด์นำเสนอรัฐมนตรี</a>
+          </div>
+
+          <div class="hud-card" style="border-left: 4px solid var(--gr-ember); padding: 1rem 1.25rem;">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gr-ember); font-weight: 700;">STRATEGIC VALUE PROPOSITION</div>
+            <div style="font-size: 0.9rem; color: var(--gr-text-secondary); margin-top: 0.2rem;">
+              ฐานข้อมูลความรู้แบบโครงข่ายสำหรับ <strong>Sovereign AI</strong> สัญชาติไทย และส่งเสริม <strong>Thai Soft Power</strong> สู่เวทีสากล
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-img-box">
+          <img src="assets/gruru_future_archaeology_1791530204406.jpg" alt="Future Archaeology Hall">
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: DATA BOOMING -->
+    <section class="section-container" id="data-booming">
+      <div class="specimen-pill">
+        <span class="dot"></span>
+        CORE INNOVATION 1 // RADIAL EXPLOSION
+      </div>
+      <h2 class="section-heading">Data Booming: นวัตกรรมระเบิดความรู้ใน 3 วินาที</h2>
+      <p class="section-desc">
+        ออกแบบเพื่อแก้ปัญหามนุษย์ยุคดิจิทัลไม่ชอบอ่านตัวหนังสือยาว เริ่มจากโหนดศูนย์กลางเรื่องเดียว แล้วระเบิดออก 360 องศาเป็น 8 มิติสัมพันธ์ในพริบตา
+      </p>
+
+      <div class="booming-container">
+        <!-- Interactive Canvas -->
+        <div class="canvas-frame" id="boomingCanvas">
+          <div class="pulse-ring"></div>
+          <div class="central-core" id="coreNode">
+            <span>ภูมิปัญญาไทย</span>
+            <span style="font-size: 0.65rem; color: #FFF; font-weight: normal;">(คลิกเพื่อระเบิด)</span>
+          </div>
+        </div>
+
+        <!-- Inspector & Controls -->
+        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <div class="hud-card" style="border-top: 4px solid var(--gr-lime);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gr-fog);">STATUS CONTROLLER</span>
+              <button class="btn-primary" id="triggerBoomBtn" style="padding: 0.35rem 0.8rem; font-size: 0.75rem;">💥 ระเบิดความรู้</button>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--gr-text-secondary); display: flex; flex-direction: column; gap: 0.3rem;">
+              <div>สถานะ: <strong id="boomStatus" style="color: var(--gr-ember);">พร้อมทำงาน</strong></div>
+              <div>จำนวนข้อมูล: <strong id="nodeCount">8 โหนดเชื่อมโยง</strong></div>
+              <div>ความเร็วต่อโหนด: <strong style="color: #059669;" id="renderSpeed">40 ms (Stagger)</strong></div>
+            </div>
+          </div>
+
+          <!-- Live Node Inspector -->
+          <div class="hud-card" id="nodeInspector" style="flex: 1; border-left: 4px solid var(--gr-violet);">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gr-violet); font-weight: 700;">SPECIMEN INSPECTOR</div>
+            <div style="font-size: 1.1rem; font-weight: 700; margin: 0.4rem 0;">คลิกโหนดลูกบนจอเพื่อดูข้อมูล</div>
+            <p style="font-size: 0.85rem; color: var(--gr-text-muted);">
+              ระบบจะแสดงรหัสวัตถุทางประวัติศาสตร์ (Specimen Label) หมวดหมู่ และความสัมพันธ์เชิงความหมายในทันที
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: KNOWLEDGE GRAPH ARCHITECTURE -->
+    <section class="section-container" id="knowledge-graph">
+      <div class="specimen-pill">
+        <span class="dot"></span>
+        CORE INNOVATION 2 // UNIVERSAL ACCESSIBILITY
+      </div>
+      <h2 class="section-heading">6 หมวดความรู้สากล (Universal Knowledge Domains)</h2>
+      <p class="section-desc">
+        ออกแบบตามเกณฑ์ WCAG AA แยกความแตกต่างด้วยทั้งรูปทรงและสี เพื่อให้ทุกคนเข้าถึงได้แม้มีข้อจำกัดในการมองเห็น
+      </p>
+
+      <div class="categories-grid">
+        <div class="cat-box">
+          <div class="cat-symbol" style="background: rgba(46, 230, 255, 0.15); color: #0284C7; border: 2px solid var(--gr-cyan);">●</div>
+          <div>
+            <div style="font-weight: 700; font-size: 1.05rem;">วิทยาศาสตร์ (Science)</div>
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gr-fog);">Cyan #2EE6FF • ทรงวงกลม</div>
+            <div style="font-size: 0.85rem; color: var(--gr-text-secondary); margin-top: 0.3rem;">ชีววิทยา ฟิสิกส์ สารเคมี และการพิสูจน์เชิงทดลอง</div>
+          </div>
+        </div>
+
+        <div class="cat-box">
+          <div class="cat-symbol" style="background: rgba(255, 90, 31, 0.15); color: var(--gr-ember); border: 2px solid var(--gr-ember);">⬡</div>
+          <div>
+            <div style="font-weight: 700; font-size: 1.05rem;">ประวัติศาสตร์ (History)</div>
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gr-fog);">Ember #FF5A1F • ทรงหกเหลี่ยม</div>
+            <div style="font-size: 0.85rem; color: var(--gr-text-secondary); margin-top: 0.3rem;">โบราณคดี ยุคสมัย และจดหมายเหตุราชอาณาจักร</div>
+          </div>
+        </div>
+
+        <div class="cat-box">
+          <div class="cat-symbol" style="background: rgba(140, 107, 255, 0.15); color: var(--gr-violet); border: 2px solid var(--gr-violet);">■</div>
+          <div>
+            <div style="font-weight: 700; font-size: 1.05rem;">เทคโนโลยี (Technology)</div>
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gr-fog);">Violet #8C6BFF • ทรงสี่เหลี่ยม</div>
+            <div style="font-size: 0.85rem; color: var(--gr-text-secondary); margin-top: 0.3rem;">ปัญญาประดิษฐ์ วิศวกรรม และเครื่องมือนวัตกรรม</div>
+          </div>
+        </div>
+
+        <div class="cat-box">
+          <div class="cat-symbol" style="background: rgba(255, 194, 51, 0.15); color: #B45309; border: 2px solid var(--gr-amber);">▲</div>
+          <div>
+            <div style="font-weight: 700; font-size: 1.05rem;">ภูมิปัญญา (Culture)</div>
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gr-fog);">Amber #FFC233 • ทรงสามเหลี่ยม</div>
+            <div style="font-size: 0.85rem; color: var(--gr-text-secondary); margin-top: 0.3rem;">การแพทย์พื้นถิ่น วิถีชีวิต และขนบธรรมเนียม</div>
+          </div>
+        </div>
+
+        <div class="cat-box">
+          <div class="cat-symbol" style="background: rgba(52, 232, 158, 0.15); color: #059669; border: 2px solid var(--gr-biogreen);">◆</div>
+          <div>
+            <div style="font-weight: 700; font-size: 1.05rem;">ธรรมชาติ (Nature)</div>
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gr-fog);">Bio Green #34E89E • ข้าวหลามตัด</div>
+            <div style="font-size: 0.85rem; color: var(--gr-text-secondary); margin-top: 0.3rem;">ระบบนิเวศน์ พืชพันธุ์เขตร้อน และสิ่งแวดล้อม</div>
+          </div>
+        </div>
+
+        <div class="cat-box">
+          <div class="cat-symbol" style="background: rgba(255, 95, 162, 0.15); color: var(--gr-coral); border: 2px solid var(--gr-coral);">◎</div>
+          <div>
+            <div style="font-weight: 700; font-size: 1.05rem;">ศิลปะและการออกแบบ (Art)</div>
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gr-fog);">Coral #FF5FA2 • ทรงวงแหวน</div>
+            <div style="font-size: 0.85rem; color: var(--gr-text-secondary); margin-top: 0.3rem;">ลวดลายโบราณ สถาปัตยกรรม และสุนทรียศาสตร์</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: METHODOLOGY -->
+    <section class="section-container" id="methodology">
+      <div class="specimen-pill">
+        <span class="dot"></span>
+        5-STEP LIFECYCLE // PIPELINE
+      </div>
+      <h2 class="section-heading">วัฏจักรความรู้ 5 ขั้นตอน (Knowledge Lifecycle)</h2>
+      <p class="section-desc">
+        เส้นทางมาตรฐานที่เปลี่ยนเอกสารประวัติศาสตร์เป็นองค์ความรู้ที่นำไปใช้ได้จริงทุกวัน
+      </p>
+
+      <div class="pipeline-grid">
+        <div class="pipeline-step" style="border-top: 4px solid var(--gr-ember);">
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gr-ember); font-weight: 700;">STEP 01</div>
+          <div style="font-weight: 700; font-size: 1.05rem; margin: 0.2rem 0;">EXCAVATE</div>
+          <div style="font-size: 0.85rem; color: var(--gr-text-secondary);">ขุดค้นและคัดสรรความรู้จากประวัติศาสตร์ ระบุแหล่งอ้างอิง 100%</div>
+        </div>
+
+        <div class="pipeline-step" style="border-top: 4px solid var(--gr-violet);">
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gr-violet); font-weight: 700;">STEP 02</div>
+          <div style="font-weight: 700; font-size: 1.05rem; margin: 0.2rem 0;">DECODE</div>
+          <div style="font-size: 0.85rem; color: var(--gr-text-secondary);">ถอดรหัสเอกสารดิบให้เป็นโหนดและความสัมพันธ์เชิงความหมาย</div>
+        </div>
+
+        <div class="pipeline-step" style="border-top: 4px solid var(--gr-cyan);">
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; color: #0284C7; font-weight: 700;">STEP 03</div>
+          <div style="font-weight: 700; font-size: 1.05rem; margin: 0.2rem 0;">RETELL</div>
+          <div style="font-size: 0.85rem; color: var(--gr-text-secondary);">เล่าใหม่ผ่าน Visual Storytelling สไตล์ Modern Art ใน 3-5 นาที</div>
+        </div>
+
+        <div class="pipeline-step" style="border-top: 4px solid var(--gr-lime); background: #FAFDF2;">
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; color: #4D7C0F; font-weight: 700;">STEP 04</div>
+          <div style="font-weight: 700; font-size: 1.05rem; margin: 0.2rem 0;">CONNECT</div>
+          <div style="font-size: 0.85rem; color: var(--gr-text-secondary);">เปิดมุมมองเชื่อมโยงข้ามศาสตร์ด้วย Data Booming & กราฟความรู้</div>
+        </div>
+
+        <div class="pipeline-step" style="border-top: 4px solid var(--gr-biogreen);">
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; color: #059669; font-weight: 700;">STEP 05</div>
+          <div style="font-weight: 700; font-size: 1.05rem; margin: 0.2rem 0;">APPLY</div>
+          <div style="font-size: 0.85rem; color: var(--gr-text-secondary);">ปิดท้ายด้วยการ์ด Everyday Takeaway นำไปใช้ในชีวิตจริงได้ทันที</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div style="display: flex; align-items: center; gap: 0.8rem;">
+      <img src="assets/gruru_logo_thai_1791530183017.jpg" alt="Logo" style="width: 32px; height: 32px; border-radius: 4px;">
+      <div>
+        <div style="font-weight: 700; font-size: 0.95rem;">GRURU MUSEUM — Digital Archaeology & Cultural Innovation</div>
+        <div style="font-size: 0.8rem; color: var(--gr-fog);">พัฒนาตามมาตรฐาน Google Antigravity & W3C WCAG AA</div>
+      </div>
+    </div>
+
+    <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--gr-text-secondary);">
+      <a href="presentation.html" style="color: var(--gr-void); font-weight: 700; text-decoration: underline;">เปิดดู Presentation สไลด์ 10 หน้า ➔</a>
+    </div>
+  </footer>
+
+  <!-- External Script -->
+  <script src="script.js"></script>
+</body>
+</html>
